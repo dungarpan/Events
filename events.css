@@ -11,31 +11,31 @@
     margin-top: 10vh;
     height: 4vh;
     border-style: solid;
-    border-width: 3px;
     -webkit-border-image: -webkit-linear-gradient(
         left,
         rgba(0,255,255,0) 1%,
         rgba(0,255,255,.5) 50%,
         rgba(0, 255,255,1) 100%
-    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    ) 100% 0 100% 0/1px 0 1px 0 stretch;
     -moz-border-image: -moz-linear-gradient(
         left,
         rgba(0,255,255,0) 1%,
         rgba(0,255,255,.5) 50%,
         rgba(0, 255,255,1) 100%
-    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    ) 100% 0 100% 0/1px 0 1px 0 stretch;
     -o-border-image: -o-linear-gradient(
         left,
         rgba(0,255,255,0) 1%,
         rgba(0,255,255,.5) 50%,
         rgba(0, 255,255,1) 100%
-    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    ) 100% 0 100% 0/1px 0 1px 0 stretch;
     border-image: linear-gradient(
         to left,
         rgba(0,255,255,0) 1%,
         rgba(0,255,255,.5) 50%,
         rgba(0, 255,255,1) 100%
-    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    );
+    background-image: linear-gradient(to right, rgba(0,0,0,1) 1%, rgba(0,0,0,.5) 50%, rgba(0,0,0,0) 100%);
 }
 
 .event-category {
@@ -47,7 +47,10 @@
 }
 
 .option {
-    margin-right: 15%;
+    padding-right: 15%;
+    padding-left: 2%;
+    height: inherit;
+    padding-top: 3px;
     color: yellow;
 }
 
@@ -76,5 +79,19 @@ body {
 }
 
 .event {
+    height: 20%;
+}
 
+.event-image {
+    height: 9vw;
+    width: 9vw;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-image: url('codegeass.jpg');
+    background-size: cover;
+}
+
+.option:hover {
+    background-color: rgba(255,255,255,.6);
+    transition: all .2s ease-in-out;
 }
