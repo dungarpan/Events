@@ -1,0 +1,80 @@
+.events {
+    width: 90%;
+    height: 70vh;
+    background-color: cornsilk;
+    margin-top: 7vh;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+.option-bar {
+    margin-top: 10vh;
+    height: 4vh;
+    border-style: solid;
+    border-width: 3px;
+    -webkit-border-image: -webkit-linear-gradient(
+        left,
+        rgba(0,255,255,0) 1%,
+        rgba(0,255,255,.5) 50%,
+        rgba(0, 255,255,1) 100%
+    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    -moz-border-image: -moz-linear-gradient(
+        left,
+        rgba(0,255,255,0) 1%,
+        rgba(0,255,255,.5) 50%,
+        rgba(0, 255,255,1) 100%
+    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    -o-border-image: -o-linear-gradient(
+        left,
+        rgba(0,255,255,0) 1%,
+        rgba(0,255,255,.5) 50%,
+        rgba(0, 255,255,1) 100%
+    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+    border-image: linear-gradient(
+        to left,
+        rgba(0,255,255,0) 1%,
+        rgba(0,255,255,.5) 50%,
+        rgba(0, 255,255,1) 100%
+    ) 100% 0 100% 0/3px 0 3px 0 stretch;
+}
+
+.event-category {
+    height: 90vh;
+}
+
+@media screen and ( max-width: 576px) {
+    .option { width: 100%; }
+}
+
+.option {
+    margin-right: 15%;
+    color: yellow;
+}
+
+.events.is-selected {
+    opacity: .3;
+    transition: opacity 1s ease-in-out;
+} 
+
+.bg {
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    height: 100vh;
+    margin-left: 5%;
+}
+
+body {
+    margin: 0;
+}
+
+.background {
+    z-index: -1;
+    filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+}
+
+.event {
+
+}
