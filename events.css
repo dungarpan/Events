@@ -1,10 +1,13 @@
 .events {
     width: 90%;
     height: 70vh;
-    background-color: cornsilk;
+    background-color: rgb(255, 248, 220);
     margin-top: 7vh;
     margin-right: 10px;
     opacity: 0;
+}
+.flickity-viewport {
+    overflow: visible;
 }
 
 .option-bar {
@@ -13,29 +16,30 @@
     border-style: solid;
     -webkit-border-image: -webkit-linear-gradient(
         left,
-        rgba(0,255,255,0) 1%,
-        rgba(0,255,255,.5) 50%,
-        rgba(0, 255,255,1) 100%
+        rgba(255,255,255,0) 1%,
+        rgba(255,255,255,.5) 50%,
+        rgba(255, 255,255,1) 100%
     ) 100% 0 100% 0/1px 0 1px 0 stretch;
     -moz-border-image: -moz-linear-gradient(
         left,
-        rgba(0,255,255,0) 1%,
-        rgba(0,255,255,.5) 50%,
-        rgba(0, 255,255,1) 100%
+        rgba(255,255,255,0) 1%,
+        rgba(255,255,255,.5) 50%,
+        rgba(255, 255,255,1) 100%
     ) 100% 0 100% 0/1px 0 1px 0 stretch;
     -o-border-image: -o-linear-gradient(
         left,
-        rgba(0,255,255,0) 1%,
-        rgba(0,255,255,.5) 50%,
-        rgba(0, 255,255,1) 100%
+        rgba(255,255,255,0) 1%,
+        rgba(255,255,255,.5) 50%,
+        rgba(255, 255,255,1) 100%
     ) 100% 0 100% 0/1px 0 1px 0 stretch;
     border-image: linear-gradient(
         to left,
-        rgba(0,255,255,0) 1%,
-        rgba(0,255,255,.5) 50%,
-        rgba(0, 255,255,1) 100%
+        rgba(255,255,255,0) 1%,
+        rgba(255,255,255,.5) 50%,
+        rgba(255, 255,255,1) 100%
     );
     background-image: linear-gradient(to right, rgba(0,0,0,1) 1%, rgba(0,0,0,.5) 50%, rgba(0,0,0,0) 100%);
+    perspective-origin: center;
 }
 
 .event-category {
@@ -47,15 +51,21 @@
 }
 
 .option {
-    padding-right: 15%;
-    padding-left: 2%;
+    padding-right: 4%;
+    padding-left: 3%;
+    margin-right: 1%;
     height: inherit;
-    padding-top: 3px;
-    color: yellow;
+    color: whitesmoke;
+    transition: opacity 1s ease-in-out;
+}
+
+.option.is-selected {
+    background-color: rgb(219, 206, 206, 0.4);
 }
 
 .events.is-selected {
-    opacity: .3;
+    opacity: 1;
+    background-color: rgba(255, 248, 220, 0);
     transition: opacity 1s ease-in-out;
 } 
 
@@ -78,20 +88,11 @@ body {
     height: 100vh;
 }
 
-.event {
-    height: 20%;
-}
-
-.event-image {
-    height: 9vw;
-    width: 9vw;
-    margin-top: 10%;
-    margin-left: 10%;
-    background-image: url('codegeass.jpg');
-    background-size: cover;
-}
-
 .option:hover {
-    background-color: rgba(255,255,255,.6);
+    border: 1px solid whitesmoke;
+    border-left: 0;
+    border-right: 0;
+    transform: perspective(500px) translateZ(100px);
     transition: all .2s ease-in-out;
 }
+
